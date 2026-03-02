@@ -18,4 +18,6 @@ public class Question {
     private String optionC;
     private String optionD;
     private String correctAnswer;
+    private String difficultyLevel;
+    private String category;
 }
