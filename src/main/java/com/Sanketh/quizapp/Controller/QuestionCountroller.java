@@ -3,6 +3,7 @@ package com.Sanketh.quizapp.Controller;
 import com.Sanketh.quizapp.Entity.Question;
 import com.Sanketh.quizapp.Service.QuestionsService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,11 @@ public class QuestionCountroller  {
 
     @GetMapping("/getall")
     public List<Question> getAllQuestions() {
-        return "This will return all questions";
+        return quetionsService.getQuestions();
+    }
+    @GetMapping("/{catogary}")
+    public List<Question> getQuestionsByCatogary(@PathVariable String catogary)
+    {
+        return quetionsService.getQuestionsByCategory()
     }
 }
