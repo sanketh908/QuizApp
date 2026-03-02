@@ -1,6 +1,7 @@
 package com.Sanketh.quizapp.Service;
 
 import com.Sanketh.quizapp.Entity.Question;
+import com.Sanketh.quizapp.Entity.QuestionWrapper;
 import com.Sanketh.quizapp.Entity.Quiz;
 import com.Sanketh.quizapp.Repository.QuestionRepository;
 import com.Sanketh.quizapp.Repository.QuizRepository;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuizService {
@@ -30,5 +32,15 @@ public class QuizService {
         quiz.setQuestions(questions);
         quizRepository.save(quiz);
         return new ResponseEntity<>("done ", HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {
+       Optional<Quiz> quiz= quizRepository.findById(id);
+       List<Question> question = quiz.get().getQuestions();
+       List<QuestionWrapper> questionWrappers = new ArrayList<>();
+       for  (Question q : question) {
+           QuestionWrapper questionWrapper = new QuestionWrapper(q.getId(),q.getQuestionText(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD());
+       }
+       return new ResponseEntity<>(questionWrappers, HttpStatus.OK);
     }
 }

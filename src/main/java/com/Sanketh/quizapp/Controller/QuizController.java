@@ -1,6 +1,7 @@
 package com.Sanketh.quizapp.Controller;
 
 import com.Sanketh.quizapp.Entity.Question;
+import com.Sanketh.quizapp.Entity.QuestionWrapper;
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import com.Sanketh.quizapp.Service.QuizService;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +39,7 @@ public class QuizController {
 
     }
     @GetMapping("get/{id}")
-    public ResponseEntity<List<Question>> getQuiz(@PathVariable Integer id) {
-
+    public ResponseEntity<List<QuestionWrapper>> getQuiz(@PathVariable Integer id) {
+       return quizService.getQuizQuestions(id);
     }
 }
