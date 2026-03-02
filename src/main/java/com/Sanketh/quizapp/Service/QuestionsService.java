@@ -25,4 +25,8 @@ public class QuestionsService {
   public Question addQuestion(Question question) {
         return questionRepository.save(question);
   }
+
+    public List<Question> getQuestionsByDifficulty(String difficulty) {
+        return questionRepository.findAllByDifficulty(difficulty);
+    }
 }
