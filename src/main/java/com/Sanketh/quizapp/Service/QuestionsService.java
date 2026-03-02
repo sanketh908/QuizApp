@@ -27,6 +27,6 @@ public class QuestionsService {
   }
 
     public List<Question> getQuestionsByDifficulty(String difficulty) {
-        return questionRepository.findAllByDifficulty(difficulty);
+        return questionRepository.findAllByDifficultyLevel(difficulty);
     }
 }

@@ -2,10 +2,12 @@ package com.Sanketh.quizapp.Controller;
 
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import com.Sanketh.quizapp.Service.QuizService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
@@ -18,10 +20,17 @@ public class QuizController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<ResponseEntity<String>> createQuiz(@RequestBody String category,
+    public ResponseEntity<String> createQuiz(@RequestBody String category,
                                              @RequestParam int numQ,
                                              @RequestParam String title) {
-            return new ResponseEntity<>(quizService.createQuiz(category,numQ,title), HttpStatus.CREATED);
+        try {
+            return new ResponseEntity<>("done", HttpStatus.CREATED);
+        }
+        catch (Exception e) {
+            log.error("error while creating quiz");
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
 
     }
 }
