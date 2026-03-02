@@ -3,6 +3,7 @@ package com.Sanketh.quizapp.Service;
 import com.Sanketh.quizapp.Entity.Question;
 import com.Sanketh.quizapp.Entity.QuestionWrapper;
 import com.Sanketh.quizapp.Entity.Quiz;
+import com.Sanketh.quizapp.Entity.Response;
 import com.Sanketh.quizapp.Repository.QuestionRepository;
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import org.springframework.http.HttpStatus;
@@ -43,5 +44,21 @@ public class QuizService {
            questionWrappers.add(questionWrapper);
        }
        return new ResponseEntity<>(questionWrappers, HttpStatus.OK);
+    }
+
+    public ResponseEntity<Integer> calculateRessult(Integer id, List<Response> response) {
+        Quiz quiz = quizRepository.findById(id).get();
+        List<Question> questions = quiz.getQuestions();
+        int right =0;
+        int i=0;
+        for(Response r : response) {
+            if(r.getResponse().equalsIgnoreCase(questions.get(i).getCorrectAnswer()))
+            {
+                right++;
+
+            }
+            i++;
+        }
+        return new ResponseEntity<>(right,HttpStatus.OK);
     }
 }
