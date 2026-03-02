@@ -1,11 +1,14 @@
 package com.Sanketh.quizapp.Controller;
 
+import com.Sanketh.quizapp.Entity.Question;
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import com.Sanketh.quizapp.Service.QuizService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -24,6 +27,7 @@ public class QuizController {
                                              @RequestParam int numQ,
                                              @RequestParam String title) {
         try {
+            quizService.createQuiz(category, numQ, title);
             return new ResponseEntity<>("done", HttpStatus.CREATED);
         }
         catch (Exception e) {
@@ -31,6 +35,10 @@ public class QuizController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
+
+    }
+    @GetMapping("get/{id}")
+    public ResponseEntity<List<Question>> getQuiz(@PathVariable Integer id) {
 
     }
 }
