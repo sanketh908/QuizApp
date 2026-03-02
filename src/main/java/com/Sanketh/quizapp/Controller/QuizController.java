@@ -23,21 +23,27 @@ public class QuizController {
 
     }
 
-    @PostMapping("create")
-    public ResponseEntity<String> createQuiz(@RequestBody String category,
-                                             @RequestParam int numQ,
-                                             @RequestParam String title) {
-        try {
-            quizService.createQuiz(category, numQ, title);
-            return new ResponseEntity<>("done", HttpStatus.CREATED);
-        }
-        catch (Exception e) {
-            log.error("error while creating quiz");
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-
-        }
-
-    }
+//    @PostMapping("create")
+//    public ResponseEntity<String> createQuiz(@RequestBody String category,
+//                                             @RequestParam int numQ,
+//                                             @RequestParam String title) {
+//        try {
+//            quizService.createQuiz(category, numQ, title);
+//            return new ResponseEntity<>("done", HttpStatus.CREATED);
+//        }
+//        catch (Exception e) {
+//            log.error("error while creating quiz");
+//            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+//
+//        }
+//
+//    }
+@PostMapping("create")
+public ResponseEntity<String> createQuiz(@RequestParam String category,
+                                         @RequestParam int numQ,
+                                         @RequestParam String title) {
+    return quizService.createQuiz(category, numQ, title);
+}
     @GetMapping("get/{id}")
     public ResponseEntity<List<QuestionWrapper>> getQuiz(@PathVariable Integer id) {
        return quizService.getQuizQuestions(id);
