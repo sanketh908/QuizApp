@@ -40,6 +40,7 @@ public class QuizService {
        List<QuestionWrapper> questionWrappers = new ArrayList<>();
        for  (Question q : question) {
            QuestionWrapper questionWrapper = new QuestionWrapper(q.getId(),q.getQuestionText(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD());
+           questionWrappers.add(questionWrapper);
        }
        return new ResponseEntity<>(questionWrappers, HttpStatus.OK);
     }
