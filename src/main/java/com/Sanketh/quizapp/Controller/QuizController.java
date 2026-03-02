@@ -37,6 +37,13 @@ public class QuizController {
 
         }
 
+
+
+    }
+    @PostMapping("/submit/{id}")
+    public ResponseEntity<Integer> submitQuize(@PathVariable Integer id,@RequestBody Response)
+    {
+
     }
 
     @GetMapping("get/{id}")
