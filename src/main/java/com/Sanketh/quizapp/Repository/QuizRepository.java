@@ -1,4 +1,7 @@
 package com.Sanketh.quizapp.Repository;
 
-public interface QuizRepository {
+import com.Sanketh.quizapp.Entity.Quiz;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface QuizRepository extends JpaRepository<Quiz, Integer> {
 }
