@@ -19,4 +19,8 @@ inside /questions
 
 <br>
 <hr>
+------->difficulty/{difficulty}
+<br>
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/d2fb365e-785e-43ee-8f0e-50182e082c29" />
+
 
