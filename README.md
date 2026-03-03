@@ -11,5 +11,12 @@ inside /questions
 ------>/add
 <br>
 <img width="1600" height="899" alt="image" src="https://github.com/user-attachments/assets/d78fbce5-f47b-4ffb-8bda-1a6d8d09525c" />
-
 <hr>
+<br>
+---->/category/{category}
+<br>
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/840290ef-1d30-494c-b9ee-e25dd7d9bf1f" />
+
+<br>
+<hr>
+
