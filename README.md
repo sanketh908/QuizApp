@@ -44,6 +44,11 @@ inside /quiz
 
 
 <hr>
+<h6>DATABASE</h6>
+<br>
+<br>
+<img width="1600" height="845" alt="image" src="https://github.com/user-attachments/assets/6de5e78d-0831-4ceb-b7ec-c21875c50196" />
+
 
 
 
