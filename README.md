@@ -6,3 +6,10 @@ inside /questions
 -----> /getall
 <br>
 <img width="1600" height="899" alt="image" src="https://github.com/user-attachments/assets/f563d452-20e4-48f3-92a6-fc2dc8df18f2" />
+<hr>
+<br>
+------>/add
+<br>
+<img width="1600" height="899" alt="image" src="https://github.com/user-attachments/assets/d78fbce5-f47b-4ffb-8bda-1a6d8d09525c" />
+
+<hr>
