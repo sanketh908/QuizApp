@@ -1,13 +1,12 @@
 package com.Sanketh.quizapp.Service;
 
 import com.Sanketh.quizapp.Entity.Question;
-import com.Sanketh.quizapp.Entity.QuestionWrapper;
+import com.Sanketh.quizapp.DataTrensferObjects.QuestionWrapper;
 import com.Sanketh.quizapp.Entity.Quiz;
-import com.Sanketh.quizapp.Entity.Response;
+import com.Sanketh.quizapp.DataTrensferObjects.Response;
 import com.Sanketh.quizapp.Repository.QuestionRepository;
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -40,7 +39,7 @@ public class QuizService {
        List<Question> question = quiz.get().getQuestions();
        List<QuestionWrapper> questionWrappers = new ArrayList<>();
        for  (Question q : question) {
-           QuestionWrapper questionWrapper = new QuestionWrapper(q.getId(),q.getQuestionText(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD());
+           QuestionWrapper questionWrapper = new QuestionWrapper(q.getId(),q.getQuestionText(),q.getOptionA(),q.getOptionB(),q.getOptionC(),q.getOptionD(),q.getDifficultyLevel(),q.getCategory());
            questionWrappers.add(questionWrapper);
        }
        return new ResponseEntity<>(questionWrappers, HttpStatus.OK);

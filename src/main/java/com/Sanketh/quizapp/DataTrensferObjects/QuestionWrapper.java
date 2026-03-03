@@ -1,4 +1,4 @@
-package com.Sanketh.quizapp.Entity;
+package com.Sanketh.quizapp.DataTrensferObjects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,13 +20,23 @@ public class QuestionWrapper {
     private String difficultyLevel;
     private String category;
 
-    public QuestionWrapper(int id, String questionText, String optionA, String optionB, String optionC, String optionD) {
+
+    public QuestionWrapper(int id, String questionText, String optionA, String optionB
+            , String optionC, String optionD, String difficultyLevel, String category) {
         this.id = id;
         this.questionText = questionText;
         this.optionA = optionA;
         this.optionB = optionB;
         this.optionC = optionC;
         this.optionD = optionD;
+        this.difficultyLevel = difficultyLevel;
+        this.category = category;
+
+
+    }
+
+
+    public QuestionWrapper() {
 
     }
 }

@@ -1,8 +1,7 @@
 package com.Sanketh.quizapp.Controller;
 
-import com.Sanketh.quizapp.Entity.Question;
-import com.Sanketh.quizapp.Entity.QuestionWrapper;
-import com.Sanketh.quizapp.Entity.Response;
+import com.Sanketh.quizapp.DataTrensferObjects.QuestionWrapper;
+import com.Sanketh.quizapp.DataTrensferObjects.Response;
 import com.Sanketh.quizapp.Repository.QuizRepository;
 import com.Sanketh.quizapp.Service.QuizService;
 import lombok.extern.slf4j.Slf4j;

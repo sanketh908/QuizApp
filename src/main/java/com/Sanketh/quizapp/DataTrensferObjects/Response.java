@@ -1,4 +1,4 @@
-package com.Sanketh.quizapp.Entity;
+package com.Sanketh.quizapp.DataTrensferObjects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
