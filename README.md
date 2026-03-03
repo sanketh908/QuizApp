@@ -38,6 +38,13 @@ inside /quiz
 <img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/9bd1a6f0-5b91-4af5-8380-8bd72af6b3bd" />
 <br>
 <hr>
+<br>
+----->/submit/{id}
+<img width="1600" height="852" alt="image" src="https://github.com/user-attachments/assets/9ee3a936-6d8e-405a-806a-840a17e6e2f8" />
+
+
+<hr>
+
 
 
 
