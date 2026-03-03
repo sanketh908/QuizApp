@@ -22,5 +22,16 @@ inside /questions
 ------->difficulty/{difficulty}
 <br>
 <img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/d2fb365e-785e-43ee-8f0e-50182e082c29" />
+<hr>
+<br>
+inside /quiz
+<br>
+<br>
+------>/create
+<br>
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/b3d15d6b-443a-4905-9a3f-f5202ebe4ef5" />
+<hr>
+<br>
+
 
 
