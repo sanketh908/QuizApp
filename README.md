@@ -1,4 +1,4 @@
-<h1>QuizApp</h1>
+<h1><b>QuizApp</b></h1>
 A Quiz App built using Spring Boot is a simple web application that allows users to take quizzes online. In this project, the admin can add, edit, or delete questions, and users can answer the questions and see their scores at the end. The app uses Spring Boot to handle the backend logic and connect to a database where the questions and results are stored. It is easy to manage and helps demonstrate basic concepts like creating REST APIs, handling user input, and working with databases. This project is a good example of how to build a basic and functional web application using Java and Spring Boot.
 <hr>
 inside /questions
@@ -44,7 +44,7 @@ inside /quiz
 
 
 <hr>
-<h6>DATABASE</h6>
+<h4><b>DATABASE</b>b></h4>
 <br>
 <br>
 <img width="1600" height="845" alt="image" src="https://github.com/user-attachments/assets/6de5e78d-0831-4ceb-b7ec-c21875c50196" />
