@@ -31,7 +31,7 @@ public class QuizService {
         quiz.setQuizName(title);
         quiz.setQuestions(questions);
         quizRepository.save(quiz);
-        quiz.getId();
+        return quiz.getId();
     }
 
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {
