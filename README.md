@@ -32,6 +32,13 @@ inside /quiz
 <img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/b3d15d6b-443a-4905-9a3f-f5202ebe4ef5" />
 <hr>
 <br>
+------>get/{id}
+<br>
+<br>
+<img width="1600" height="850" alt="image" src="https://github.com/user-attachments/assets/9bd1a6f0-5b91-4af5-8380-8bd72af6b3bd" />
+<br>
+<hr>
+
 
 
 
