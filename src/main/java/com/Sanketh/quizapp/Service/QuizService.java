@@ -25,13 +25,13 @@ public class QuizService {
     }
 
 
-    public ResponseEntity<String> createQuiz(String category, int numQ, String title) {
+    public Integer createQuiz(String category, int numQ, String title) {
         List<Question> questions = questionRepository.findRandomQuestionsByCategory(category,numQ);
         Quiz quiz = new Quiz();
         quiz.setQuizName(title);
         quiz.setQuestions(questions);
         quizRepository.save(quiz);
-        return new ResponseEntity<>("done ", HttpStatus.CREATED);
+        quiz.getId();
     }
 
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {

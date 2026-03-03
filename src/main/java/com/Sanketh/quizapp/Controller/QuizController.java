@@ -24,12 +24,12 @@ public class QuizController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<String> createQuiz(@RequestParam String category,
+    public ResponseEntity<?> createQuiz(@RequestParam String category,
                                              @RequestParam int numQ,
                                              @RequestParam String title) {
         try {
-            quizService.createQuiz(category, numQ, title);
-            return new ResponseEntity<>("done", HttpStatus.CREATED);
+           Integer id= quizService.createQuiz(category, numQ, title);
+            return new ResponseEntity<>(id, HttpStatus.CREATED);
         }
         catch (Exception e) {
             log.error("error while creating quiz");
