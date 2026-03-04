@@ -28,6 +28,9 @@ public class UserCountroller {
     @GetMapping("/getUser/{username}")
     public User getUser(@PathVariable String username) {
         return userService.findByUsername(username);
+    }@DeleteMapping("/deleteuser/{id}")
+    public void deleteUser(@PathVariable int id) {
+         userService.deleteuser(id);
     }
 
 }
