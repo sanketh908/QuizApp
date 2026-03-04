@@ -13,7 +13,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("quiz")
+@RequestMapping("/quiz")
 public class QuizController {
     private final QuizService quizService;
 
