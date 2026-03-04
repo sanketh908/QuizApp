@@ -2,12 +2,14 @@ package com.Sanketh.quizapp.Controller;
 
 import com.Sanketh.quizapp.Entity.User;
 import com.Sanketh.quizapp.Service.UserService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 
 public class UserCountroller {
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
   private final   UserService userService;
 
@@ -18,6 +20,7 @@ public class UserCountroller {
     @PostMapping("/adduser")
     public User addUser(@RequestBody User user) {
         user.setRole("USER");
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
       return   userService.saveUser(user);
 
     }
